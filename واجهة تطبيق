@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260707-05-f6eb95b"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حلول إعادة التدوير</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .category-card:hover { transform: translateY(-6px); }
+        .category-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .category-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    </style>
+  <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+ </head>
+ <body data-template-id="__page-root" class="min-h-screen" style="background: rgb(240, 253, 244);">
+  <header class="relative overflow-hidden" style="height: calc(50 * min(var(--vh, 1vh), 1vh));"><img data-template-id="hero-img" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/9324356/pexels-photo-9324356.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Man recycling plastic and trash in a studio with green background. Promotes eco-awareness and sustainability.">
+   <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
+   <nav class="relative z-10 flex items-center justify-between p-6">
+    <div class="flex items-center gap-2"><i data-lucide="recycle" class="text-emerald-400" style="width:32px;height:32px;"></i>
+     <h1 data-template-id="app-title" class="canva-text text-white font-bold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 20px;">إعادة التدوير</h1>
+    </div>
+   </nav>
+   <div class="relative z-10 flex flex-col items-center justify-center h-full -mt-16 text-center px-4">
+    <h2 data-template-id="hero-heading" class="canva-text text-white font-bold mb-4" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">حلول بيئية ذكية لإعادة تدوير النفايات</h2>
+    <p data-template-id="hero-subtitle" class="canva-text text-white/90 max-w-xl" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">نساعدك على فرز نفاياتك وإعادة تدويرها بطريقة صحيحة للحفاظ على كوكبنا</p>
+   </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-6 -mt-12 relative z-20"><!-- Stats -->
+   <section data-template-id="stats-bar" class="canva-section grid grid-cols-1 md:grid-cols-3 gap-4 rounded-2xl p-6 shadow-lg mb-12" style="background: rgb(255, 255, 255);">
+    <div class="text-center">
+     <p class="text-3xl font-bold text-emerald-600">♻️ 85%</p>
+     <p data-template-id="stat-1-label" class="canva-text mt-1" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">نسبة إعادة التدوير</p>
+    </div>
+    <div class="text-center">
+     <p class="text-3xl font-bold text-emerald-600">🌍 2.5 طن</p>
+     <p data-template-id="stat-2-label" class="canva-text mt-1" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">نفايات تم تحويلها شهرياً</p>
+    </div>
+    <div class="text-center">
+     <p class="text-3xl font-bold text-emerald-600">🌱 150+</p>
+     <p data-template-id="stat-3-label" class="canva-text mt-1" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">نقطة تجميع نشطة</p>
+    </div>
+   </section><!-- Categories -->
+   <h3 data-template-id="categories-heading" class="canva-text font-bold mb-6" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 19px;">فئات إعادة التدوير</h3>
+   <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <article class="category-card rounded-2xl overflow-hidden shadow-md" data-template-id="card-plastic" style="background: rgb(255, 255, 255);"><img data-template-id="img-plastic" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/3735205/pexels-photo-3735205.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Top-view of crushed plastic bottles prepared for recycling, promoting sustainability.">
+     <div class="p-5">
+      <h4 data-template-id="title-plastic" class="canva-text font-bold mb-2" style="color: rgb(6, 95, 70); font-weight: 700; font-style: normal; font-size: 16px;">البلاستيك</h4>
+      <p data-template-id="desc-plastic" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">زجاجات، أكياس، وعبوات بلاستيكية قابلة لإعادة التدوير</p>
+     </div>
+    </article>
+    <article class="category-card rounded-2xl overflow-hidden shadow-md" data-template-id="card-paper" style="background: rgb(255, 255, 255);"><img data-template-id="img-paper" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/4592995/pexels-photo-4592995.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Detailed view of stacked recyclable cardboard showing texture and patterns.">
+     <div class="p-5">
+      <h4 data-template-id="title-paper" class="canva-text font-bold mb-2" style="color: rgb(6, 95, 70); font-weight: 700; font-style: normal; font-size: 16px;">الورق والكرتون</h4>
+      <p data-template-id="desc-paper" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">صحف، مجلات، صناديق كرتونية وأوراق مكتبية</p>
+     </div>
+    </article>
+    <article class="category-card rounded-2xl overflow-hidden shadow-md" data-template-id="card-glass" style="background: rgb(255, 255, 255);"><img data-template-id="img-glass" class="canva-image w-full h-48 object-cover" loading="lazy" src="https://images.pexels.com/photos/3737813/pexels-photo-3737813.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Close-up image showing three recycled glass bottles in green, clear, and brown hues on a white surface.">
+     <div class="p-5">
+      <h4 data-template-id="title-glass" class="canva-text font-bold mb-2" style="color: rgb(6, 95, 70); font-weight: 700; font-style: normal; font-size: 16px;">الزجاج</h4>
+      <p data-template-id="desc-glass" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">قوارير، برطمانات وعبوات زجاجية بمختلف الألوان</p>
+     </div>
+    </article>
+   </section><!-- Tips -->
+   <section data-template-id="tips-section" class="canva-section rounded-2xl p-8 mb-12" style="background: rgb(236, 253, 245);">
+    <h3 data-template-id="tips-heading" class="canva-text font-bold mb-4" style="color: rgb(6, 95, 70); font-weight: 700; font-style: normal; font-size: 19px;">نصائح لإعادة التدوير</h3>
+    <ul class="space-y-3">
+     <li class="flex items-start gap-3"><i data-lucide="check-circle" class="text-emerald-500 mt-1 shrink-0" style="width:20px;height:20px;"></i> <span data-template-id="tip-1" class="canva-text" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">اغسل العبوات البلاستيكية قبل وضعها في حاوية إعادة التدوير</span></li>
+     <li class="flex items-start gap-3"><i data-lucide="check-circle" class="text-emerald-500 mt-1 shrink-0" style="width:20px;height:20px;"></i> <span data-template-id="tip-2" class="canva-text" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">افصل الأغطية المعدنية عن الزجاجات قبل التدوير</span></li>
+     <li class="flex items-start gap-3"><i data-lucide="check-circle" class="text-emerald-500 mt-1 shrink-0" style="width:20px;height:20px;"></i> <span data-template-id="tip-3" class="canva-text" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">اطوِ الصناديق الكرتونية لتوفير المساحة في حاويات التجميع</span></li>
+    </ul>
+   </section>
+  </main>
+  <footer class="text-center py-6">
+   <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">© 2026 حلول إعادة التدوير — معاً نحو بيئة أنظف 🌿</p>
+  </footer>
+  <script src="/_sdk/e063511df281944a.editing_sdk.js" integrity="sha512-Xa8p4aPfoMxVnzxQE2WAG0FfoaPLxdjOJMfUZGm1yZosJTYmnNDvgLkJ2EoN0i3zxjeQVAzUMSXNvTKQVqbXyQ=="></script>
+  <script>lucide.createIcons();</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a17a143004572827',t:'MTc4MzQ2MTE3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
