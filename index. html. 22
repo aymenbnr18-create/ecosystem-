@@ -1,0 +1,301 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيكو إنوفيت | EcoInnovate</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface-color: #f7faf8;
+            --primary-color: #4caf50;
+            --primary-light: #e8f5e9;
+            --text-main: #2e3d30;
+            --text-sub: #758a77;
+            --error-color: #e53935;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--surface-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 410px;
+            background: var(--bg-color);
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(76, 175, 80, 0.08);
+            padding: 30px 24px;
+            box-sizing: border-box;
+            border: 1px solid rgba(76, 175, 80, 0.1);
+        }
+
+        .logo-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .logo-header h1 {
+            color: var(--primary-color);
+            font-size: 28px;
+            margin: 0 0 8px 0;
+            font-weight: 800;
+        }
+
+        .logo-header p {
+            color: var(--text-sub);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1.5px solid #e0e6e1;
+            background-color: var(--surface-color);
+            color: var(--text-main);
+            font-size: 15px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--bg-color);
+            box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.15);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 14px;
+            border: none;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #43a047;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #c8e6c9;
+        }
+
+        .btn-danger {
+            background-color: #ffebee;
+            color: var(--error-color);
+        }
+
+        .dashboard-card {
+            background: var(--primary-light);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 28px;
+            border: 1px solid rgba(76, 175, 80, 0.15);
+        }
+
+        .dashboard-card p {
+            margin: 0 0 10px 0;
+            color: #388e3c;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .points-display {
+            font-size: 42px;
+            font-weight: 800;
+            color: #1b5e20;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: var(--text-sub);
+            font-size: 13px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div class="phone-container">
+    
+    <!-- شاشة تسجيل الدخول وإنشاء الحساب -->
+    <div id="login-screen">
+        <div class="logo-header">
+            <h1>إيكو إنوفيت 🌱</h1>
+            <p>منصتك الذكية لإعادة التدوير والابتكار</p>
+        </div>
+        
+        <div class="input-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="name@example.com">
+        </div>
+        
+        <div class="input-group">
+            <label>كلمة المرور</label>
+            <input type="password" id="password" placeholder="••••••••">
+        </div>
+        
+        <button class="btn-primary" onclick="loginUser()">دخول الحساب 🔑</button>
+        <div class="divider">أو إذا كنت مستخدمًا جديدًا</div>
+        <button class="btn-secondary" onclick="registerUser()">إنشاء حساب جديد ✨</button>
+    </div>
+
+    <!-- لوحة تحكم المستخدم بعد الدخول المتصلة بـ Firebase -->
+    <div id="dashboard-screen" class="hidden">
+        <div class="logo-header" style="margin-bottom: 20px;">
+            <h1 style="font-size: 24px;">مرحباً بك مجدداً 👋</h1>
+            <p id="user-email-display"></p>
+        </div>
+        
+        <div class="dashboard-card">
+            <p>رصيد نقاطك البيئية الحالي</p>
+            <div class="points-display" id="user-points">0</div>
+        </div>
+        
+        <div class="logo-header" style="text-align: right; margin-bottom: 15px;">
+            <h2 style="font-size: 16px; margin: 0; color: var(--text-main);">سجّل عملية تدوير جديدة</h2>
+        </div>
+        
+        <div class="input-group">
+            <input type="number" id="weight" placeholder="أدخل وزن النفايات بالكيلو جرام (كجم)">
+        </div>
+        
+        <button class="btn-primary" onclick="addPoints()">إرسال وكسب نقاط ♻️</button>
+        <button class="btn-secondary btn-danger" onclick="logoutUser()" style="margin-top: 25px;">تسجيل الخروج 🚪</button>
+    </div>
+</div>
+
+<!-- استدعاء مكتبات الخوادم لـ Firebase -->
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+<script src="https://gstatic.com"></script>
+
+<script>
+    // إعدادات الربط الخاصة بقاعدة بياناتك
+    const firebaseConfig = {
+        apiKey: "AIzaSyBsmt-eq2HTM5doBq031DZGPmkv-iuH1KI",
+        authDomain: "://firebaseapp.com",
+        projectId: "ecosystem-c3cc4",
+        storageBucket: "ecosystem-c3cc4.firebasestorage.app",
+        messagingSenderId: "590924866474",
+        appId: "1:590924866474:web:c2204300eb0317672641d3"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    let currentUserDocRef = null;
+
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            document.getElementById('login-screen').classList.add('hidden');
+            document.getElementById('dashboard-screen').classList.remove('hidden');
+            document.getElementById('user-email-display').innerText = user.email;
+            
+            currentUserDocRef = db.collection("users").doc(user.uid);
+            
+            currentUserDocRef.onSnapshot(doc => {
+                if (doc.exists) {
+                    document.getElementById('user-points').innerText = doc.data().points || 0;
+                } else {
+                    currentUserDocRef.set({ points: 0 });
+                }
+            });
+        } else {
+            document.getElementById('dashboard-screen').classList.add('hidden');
+            document.getElementById('login-screen').classList.remove('hidden');
+        }
+    });
+
+    function registerUser() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if(!email || !password) return alert('برجاء ملء البيانات أولاً');
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then(cred => {
+                return db.collection("users").doc(cred.user.uid).set({ points: 0 });
+            })
+            .then(() => alert('تم إنشاء حسابك البيئي بنجاح!'))
+            .catch(err => alert('خطأ: ' + err.message));
+    }
+
+    function loginUser() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        if(!email || !password) return alert('برجاء ملء البيانات أولاً');
+
+        auth.signInWithEmailAndPassword(email, password)
+            .catch(err => alert('خطأ في الدخول: ' + err.message));
+    }
+
+    function addPoints() {
+        const weight = parseFloat(document.getElementById('weight').value);
+        if(weight > 0 && currentUserDocRef) {
+            const addedPoints = weight * 10; 
+            
+            currentUserDocRef.update({
+                points: firebase.firestore.FieldValue.increment(addedPoints)
+            }).then(() => {
+                alert(`رائع! أضفت ${addedPoints} نقطة إلى رصيدك السحابي.`);
+                document.getElementById('weight').value = '';
+            }).catch(err => alert('خطأ في التحديث: ' + err.message));
+        } else {
+            alert('الرجاء إدخال وزن صحيح أكبر من الصفر');
+        }
+    }
+
+    function logoutUser() {
+        auth.signOut();
+    }
+</script>
+
+</body>
+</html>
